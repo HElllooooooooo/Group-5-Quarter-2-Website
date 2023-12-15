@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=DM+Serif+Display&family=Marcellus&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Manrope:wght@200;300;400;500;600;700;800&family=Nanum+Myeongjo:wght@400;700;800&family=Orbitron:wght@800&family=Oxygen:wght@300;400;700&family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.Main-Title {
+font-family: cursive;
+font-size: 250%;
+color: white;
+}
+
+.button1 {
+  --bt1-color: black;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  left: 5%;
+}
+.button1 .line {
+  transition: y 200ms ease-in-out 200ms, rotate 200ms ease-in-out,
+    opacity 0ms 200ms;
+  transform-origin: center;
+}
+.button1:hover .line {
+  transition: y 200ms ease-in-out, rotate 200ms ease-in-out 200ms,
+    opacity 0ms 200ms;
+}
+.button1:hover :is(.top, .bottom) {
+  y: 45;
+}
+.button1:hover .top {
+  rotate: 45deg;
+}
+.button1:hover .bottom {
+  rotate: -45deg;
+}
+.button1:hover .middle {
+  opacity: 0;
+}
+
+.header {
+  z-index: 999;
+  position: fixed;
+  height: 12.5vh;
+  width: 100vw;
+  background: Linear-gradient(rgb(255, 104, 104), black);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.5em;
+  overflow: hidden;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+#logo {
+  height: 100%;
+  width: 18vh;
+  justify-self: center;
+  align-self: center;
+}
+
+.header h2 {
+  font-size: 1em;
+  font-family: "Comfortaa", cursive;
+  padding: 0 1em;
+}
+
+.header h2 a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header h2 a:hover {
+  text-decoration: underline;
+}
+
+#nav-left,
+#nav-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav-left,
+#nav-right a{
+ color: white;
+}
+
+#page2 {
+    background: url("genders.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+  height: 304vh;
+  width: 100vw;
+text-align: center;
+  color: white;
+  font-family: "Comfortaa", serif,;
+}
+
+
+@media screen and (max-width: 800px) {
+  #page4-text {
+    height: 100vh;
+    width: 100%;
+  }
+  #page2 > .quoteBig {
+    display: none;
+  }
+
+  #page2 > .quoteSmall {
+    display: block;
+  }
+  .p3-cards-conatiner {
+    height: 30vh;
+  }
+  #page4 img {
+    object-fit: cover;
+    height: 100%;
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #page4 {
+    flex-direction: column;
+  }
+  #page4-text {
+    width: 100vw;
+    background-color: rgba(255, 196, 2, 0.8);
+  }
+  #page4 img {
+    object-fit: cover;
+    height: 30%;
+    width: 100vw;
+  }
+  .text-container h1 {
+    font-size: 3rem;
+  }
+
+  .text-container h4 {
+    font-size: 1.5rem;
+  }
+
+  #page2 > .quoteSmall {
+    font-size: 1.35em;
+  }
+  .p3-cards-conatiner {
+    width: 12em;
+    height: 25vh;
+  }
+}
+@media screen and (max-width: 400px) {
+  .p3-cards-conatiner {
+    height: 25vh;
+    width: 10em;
+  }
+  .cardsButton {
+    font-size: 0.1rem;
+  }
+}

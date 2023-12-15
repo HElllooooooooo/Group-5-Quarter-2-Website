@@ -1,0 +1,600 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=DM+Serif+Display&family=Marcellus&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Manrope:wght@200;300;400;500;600;700;800&family=Nanum+Myeongjo:wght@400;700;800&family=Orbitron:wght@800&family=Oxygen:wght@300;400;700&family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.Main-Title {
+font-family: cursive;
+font-size: 250%;
+color: white;
+}
+
+.button1 {
+  --bt1-color: black;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  left: 5%;
+}
+.button1 .line {
+  transition: y 200ms ease-in-out 200ms, rotate 200ms ease-in-out,
+    opacity 0ms 200ms;
+  transform-origin: center;
+}
+.button1:hover .line {
+  transition: y 200ms ease-in-out, rotate 200ms ease-in-out 200ms,
+    opacity 0ms 200ms;
+}
+.button1:hover :is(.top, .bottom) {
+  y: 45;
+}
+.button1:hover .top {
+  rotate: 45deg;
+}
+.button1:hover .bottom {
+  rotate: -45deg;
+}
+.button1:hover .middle {
+  opacity: 0;
+}
+
+.header {
+  z-index: 999;
+  position: fixed;
+  height: 12.5vh;
+  width: 100vw;
+  background: Linear-gradient(rgb(255, 104, 104), black);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.5em;
+  overflow: hidden;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+#logo {
+  height: 100%;
+  width: 18vh;
+  justify-self: center;
+  align-self: center;
+}
+
+.header h2 {
+  font-size: 1em;
+  font-family: "Comfortaa", cursive;
+  padding: 0 1em;
+}
+
+.header h2 a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header h2 a:hover {
+  text-decoration: underline;
+}
+
+#nav-left,
+#nav-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: large;
+}
+
+#nav-left,
+#nav-right a{
+ color: white;
+}
+
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1em;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.text-container h1 {
+  color: #ffc402;
+  font-family: "DM Serif Display", serif;
+  font-size: 4rem;
+}
+
+.text-container h4 {
+  color: white;
+  font-family: "Marcellus", serif;
+  letter-spacing: 0.025em;
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+
+.credit {
+  color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+.credit p > a {
+  color: white;
+  
+}
+
+#searchSVG {
+  display: none;
+  position: absolute;
+  right: 5%;
+}
+
+/* Page1 start */
+#page1 {
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-image: url("LGBTQ++.png");
+}
+.Page1-button {
+  padding: 0.5em 2em;
+  margin: 0.5em 0;
+  background-color: #0e5540;
+  color: white;
+  font-size: 1.5em;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  letter-spacing: 0.05em;
+  border-radius: 5%;
+}
+
+.Page1-button:hover {
+  background-color: white;
+  color: #0e5540;
+}
+
+.scrollDown {
+  font-family: "Comfortaa", serif;
+  color: white;
+  margin: 2em 0;
+}
+/* Page1 end */
+
+/* Page2 start */
+#page2 {
+  background: url("genders.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+  height: 304vh;
+  width: 100vw;
+text-align: center;
+  color: white;
+  font-family: "Comfortaa", serif,;
+}
+
+#scts h1{
+  padding-top: 50px;
+  font-size: 40px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.Page2-Title {
+  font-size: 30px;
+text-align: center;
+  color: white;
+  
+  padding-top: 100px;
+  font-family: "Comfortaa", serif;
+}
+
+table, th, td {
+  border: 1px solid rgb(0, 0, 0);
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+  color: black;
+  
+}
+
+
+th {
+  background-color: #ffffff;
+  color: black;
+}
+
+table {
+  margin: auto;
+  font-family: "Comfortaa", serif,;
+  width: 900px;
+  
+}
+
+table a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  
+}
+
+#Sct2 img {
+  width: 700px;
+}
+
+
+#page6 {
+  background: url("mael.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+  height: 104vh;
+  width: 100vw;
+text-align: center;
+  color: white;
+  font-family: "Comfortaa", serif,;
+}
+
+#page6 pre{
+  white-space: pre-wrap;margin: 0 auto; width: fit-content;
+}
+
+#page7 {
+  background: url("fehmael.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+  height: 104vh;
+  width: 100vw;
+text-align: center;
+  color: white;
+  font-family: "Comfortaa", serif,;
+  
+}
+
+#page7 table{
+  margin: 0 auto; width: fit-content;
+}
+
+#page5 {
+  background-color: black;
+  background-size:cover;
+  background-repeat: no-repeat;
+  height: 134vh;
+  width: 100vw;
+text-align: center;
+  color: white;
+  font-family: "Comfortaa", serif,;
+}
+
+#Identified-Solutions table, th, td {
+  border: 1px solid rgb(255, 255, 255);
+  border-collapse: collapse;
+}
+
+#Identified-Solutions th, td {
+  padding: 15px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  
+}
+
+#Identified-Solutions h1{
+  font-size: 40px;
+}
+
+#Final-Solution {
+  width: 1000px;
+  margin: auto;
+}
+
+
+#Identified-Solutions th {
+  background-color: #ffffff;
+  color: rgb(255, 255, 255);
+}
+
+#Identified-Solutions table {
+  margin: auto;
+  font-family: "Comfortaa", serif,;
+  width: 900px;
+}
+
+#Identified-Solutions a{
+  text-decoration: none;
+  color: white;
+}
+
+
+
+/* #page2 {
+  color: #ffffff;
+  font-size: 2em;
+  width: 70vw;
+  text-align: center;
+  padding: 0.5em 1em;
+  font-family: "Dancing Script", cursive;
+  z-index: 5;
+} */
+/* #page2 > .quoteSmall {
+  display: none;
+  color: #ffc402;
+  font-size: 1.5em;
+  width: 70vw;
+  text-align: center;
+  padding: 0.5em 1em;
+  font-family: "Dancing Script", cursive;
+  z-index: 5;
+}
+
+#page2-img1 {
+  height: 14em;
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+}
+
+#page2-img2 {
+  height: 12em;
+  position: absolute;
+  top: -1%;
+  left: -1%; */
+/* } */
+
+/* Page2 end */
+
+/* Page3 start */
+#page3 {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  width: 100vw;
+  background: Linear-gradient(white,whitesmoke);
+  overflow: hidden;
+}
+
+#page3 h1 {
+  font-family: "Oxygen", sans-serif;
+  color: black;
+  text-align: center;
+  letter-spacing: 0.05em;
+  padding: 1em 0;
+}
+
+.p3-cards-conatiner {
+  height: 60vh;
+  position: relative;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 15em;
+  padding: 1em;
+  border-radius: 5%;
+  cursor: pointer;
+}
+
+.p3-cards-conatiner img {
+  border-radius: 5%;
+  object-fit: cover;
+  height: 80%;
+  width: 100%;
+}
+
+.p3-cards-conatiner a {
+  background: #fff;
+  border-radius: 40px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  color: #0e5540;
+  font-family: "Marcellus", serif;
+  text-decoration: none;
+  display: block;
+  justify-self: center;
+  position: absolute;
+  bottom: 10%;
+  width: 80%;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 0.5em 1em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+#cardContainerP3 {
+  display: grid;
+  place-content: center;
+  grid-auto-flow: column;
+  gap: 1em;
+}
+
+svg {
+  fill: black;
+}
+
+/* Page3 end */
+
+/* Page4 start */
+#page4 {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+}
+
+#page4 img {
+  object-fit: cover;
+  height: 100%;
+  width: 50vw;
+}
+
+#page4-text {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50vw;
+  background-color: #ffc402;
+  padding: 0 2em;
+  padding-top: 5%;
+  z-index: 2;
+}
+
+#page4-text h1 {
+  font-size: 6vh;
+  letter-spacing: 0.025em;
+  font-family: "DM Serif Display", serif;
+}
+
+#page4-text h3 {
+  font-family: "Marcellus", serif;
+  margin: 0.5em 0;
+}
+
+.miniConatinerPage2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+  padding: 1em 0;
+  border-top: 0.15em solid black;
+}
+
+.miniConatinerPage2 .wraptextP2 {
+  font-family: "Marcellus", serif;
+}
+
+.WrapminitextP2 {
+  margin: 2em 0;
+}
+
+/* Page 4 End */
+
+@media screen and (max-width: 1050px) {
+  /* Header Start */
+
+  
+  
+  #nav-right,
+  #nav-left {
+    display: none;
+  }
+
+  .button1 {
+    display: block;
+  }
+
+  #searchSVG {
+    display: block;
+  }
+
+  .header {
+    gap: 0.25em;
+  }
+
+  /* Header End */
+
+  /* Page 1 Start */
+  .text-container h1 {
+    font-size: 3.5rem;
+  }
+
+  .text-container h4 {
+    font-size: 1.25rem;
+  }
+
+  /* Page 1 End */
+  .p3-cards-conatiner {
+    width: 20em;
+    height: 30vh;
+  }
+  #cardContainerP3 {
+    grid-template-rows: repeat(2, 1fr);
+    width: 100vw;
+    place-content: center;
+    grid-auto-flow: column;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #page4-text {
+    height: 100vh;
+    width: 100%;
+  }
+  #page2 > .quoteBig {
+    display: none;
+  }
+
+  #page2 > .quoteSmall {
+    display: block;
+  }
+  .p3-cards-conatiner {
+    height: 30vh;
+  }
+  #page4 img {
+    object-fit: cover;
+    height: 100%;
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #page4 {
+    flex-direction: column;
+  }
+  #page4-text {
+    width: 100vw;
+    background-color: rgba(255, 196, 2, 0.8);
+  }
+  #page4 img {
+    object-fit: cover;
+    height: 30%;
+    width: 100vw;
+  }
+  .text-container h1 {
+    font-size: 3rem;
+  }
+
+  .text-container h4 {
+    font-size: 1.5rem;
+  }
+
+  #page2 > .quoteSmall {
+    font-size: 1.35em;
+  }
+  .p3-cards-conatiner {
+    width: 12em;
+    height: 25vh;
+  }
+}
+@media screen and (max-width: 400px) {
+  .p3-cards-conatiner {
+    height: 25vh;
+    width: 10em;
+  }
+  .cardsButton {
+    font-size: 0.1rem;
+  }
+}
